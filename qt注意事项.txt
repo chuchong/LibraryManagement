@@ -1,0 +1,14 @@
+0、要使用qtcreator ide进行编程的话，下载mingw版本的，总之我们都用qt5以上版本最好，因为4语法会不一样
+1、下载下来的mscv版本只能给vs配合使用，vs2017配置见http://www.cnblogs.com/nyx159/p/7583533.html
+	并且注意了，vs打开.pro项目后还必须更改windows sdk版本！！如果没有这个选项就再打开一次
+2、我们使用的qt是开源的，所以发布的时候也只能用动态库，所以release的exe必须要添上.dll
+	可以参考https://blog.csdn.net/u012613604/article/details/53572995这篇
+3、如果要做内嵌的浏览器的话，有两种方案，一种是下载qt5.40版本之前的，可以使用webkit;否则必须使用mscv版本的
+	并且进行配置，就像https://blog.csdn.net/chinahaerbin/article/details/52537546
+	换言之，我们应该确定一种编程配置方案
+4、《qt编程快速入门》比较推荐，不做ui的话主要看看信号和槽，但这个是qt4的语法的
+	qt5语法的入门参考https://www.devbean.net/category/qt-study-road-2/
+5、qt真好用啊，真好用啊
+
+6、mousetracking好像要先用子部件设置true，再用主部件设置true才行
+7、triggered(int)是信号，trigger()是啥不清楚，不要弄混了
