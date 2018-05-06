@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerCommandArguments>Driver={ODBC Driver 13 for SQL Server};Server=tcp:mynewserver-20180506.database.windows.net,1433;Database=LibraryManagement;Uid=ServerAdmit@mynewserver-20180506;Pwd={your_password_here};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LocalDebuggerCommandArguments>Driver={ODBC Driver 13 for SQL Server};Server=tcp:mynewserver-20180506.database.windows.net,1433;Database=LibraryManagement;Uid=ServerAdmit@mynewserver-20180506;Pwd={your_password_here};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+</Project>
