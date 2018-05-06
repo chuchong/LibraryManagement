@@ -6,39 +6,31 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>763</width>
+    <height>518</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QCheckBox" name="checkBox">
+   <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>40</y>
-      <width>91</width>
-      <height>19</height>
+      <x>20</x>
+      <y>10</y>
+      <width>120</width>
+      <height>251</height>
      </rect>
     </property>
-    <property name="text">
-     <string>CheckBox</string>
+    <property name="inputMethodHints">
+     <set>Qt::ImhNone</set>
     </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>130</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
+    <property name="currentIndex">
+     <number>1</number>
     </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
+    <widget class="QWidget" name="page"/>
+    <widget class="QWidget" name="page_2"/>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -46,7 +38,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
+     <width>763</width>
      <height>26</height>
     </rect>
    </property>
