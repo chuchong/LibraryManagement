@@ -22,7 +22,7 @@ HEADERS  += mainwindow.h \
     logindialog.h \
     libman.h \
     register.h \
-    constant.h
+    configure.h
 
 FORMS    += mainwindow.ui \
     logindialog.ui \

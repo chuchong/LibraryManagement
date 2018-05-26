@@ -2,7 +2,7 @@
 #include "mainwindow.h"
 #include "register.h"
 #include <QObject>
-#include "constant.h"
+#include "configure.h"
 
 #pragma once
 

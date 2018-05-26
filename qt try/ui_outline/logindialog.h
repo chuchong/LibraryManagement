@@ -2,6 +2,8 @@
 #define LOGINDIALOG_H
 #include <QAbstractButton>
 #include <QDialog>
+#include <QtCore>
+#include <QMessageBox>
 
 namespace Ui {
 class LoginDialog;
@@ -15,10 +17,23 @@ public:
     explicit LoginDialog(QWidget *parent = 0);
     ~LoginDialog();
 
-private slots:
-    void on_buttonBox_clicked(QAbstractButton *button);
+    void OpenMainWindowofStudent();
+    void OpenMainWindowofAdministrator();
+    void ShowRefutation();
+    void ShowBlankRefutation();
+    void ShowNoQuestRefutation();
+signals:
+    void LoginSignals(QString accnount, QString password);
+    void LoginDestruction();
 
-    void on_pushButton_clicked();
+private slots:
+    void on_LoginButton_clicked();
+    void on_RegisterButton_clicked();
+    void on_CancelButton_clicked();
+    void debug(QString accnount, QString password){
+     this->ShowRefutation();
+     //this->OpenMainWindowofStudent();
+    }
 
 private:
     Ui::LoginDialog *ui;

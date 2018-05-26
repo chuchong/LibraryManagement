@@ -1,0 +1,14 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\logindialog.o
+./debug\libman.o
+./debug\register.o
+./debug\bookwidget.o
+./debug\rentlogwidget.o
+./debug\moc_mainwindow.o
+./debug\moc_logindialog.o
+./debug\moc_register.o
+./debug\moc_bookwidget.o
+./debug\moc_rentlogwidget.o
+);

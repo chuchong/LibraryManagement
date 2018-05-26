@@ -7,21 +7,59 @@ LoginDialog::LoginDialog(QWidget *parent) :
     ui(new Ui::LoginDialog)
 {
     ui->setupUi(this);
+    //connect(this,SIGNAL(LoginSignals(QString, QString)),
+    //       this,SLOT(debug(QString, QString)));
 }
 
 LoginDialog::~LoginDialog()
 {
+    emit LoginDestruction();
     delete ui;
 }
 
-void LoginDialog::on_buttonBox_clicked(QAbstractButton *button)
+void LoginDialog::on_LoginButton_clicked()
 {
-    if(true)
-        libman::toMainWindow();
+    QString account = ui->AccountEdit->text();
+    QString password = ui->AccountEdit->text();
+//    this->ShowRefutation();
+    emit LoginSignals(account, password);
 }
 
-
-void LoginDialog::on_pushButton_clicked()
+void LoginDialog::on_RegisterButton_clicked()
 {
-    libman::toRegister();
+    Register* registr = new Register();
+    registr ->exec();
+}
+
+void LoginDialog::OpenMainWindowofStudent(){
+
+    MainWindow * mainwnd = new MainWindow(nullptr,USER_NUM);
+    mainwnd -> show();
+    this->~LoginDialog();
+}
+
+void LoginDialog::OpenMainWindowofAdministrator(){
+
+    MainWindow * mainwnd = new MainWindow(nullptr,USER_NUM);
+    mainwnd -> show();
+    this->~LoginDialog();
+}
+
+void LoginDialog::ShowRefutation(){
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::critical(this, tr("密码错误"),tr("密码错误，请重新尝试"),QMessageBox::Retry);
+}
+
+void LoginDialog::ShowBlankRefutation(){
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::critical(this, tr("账号或密码不能为空"),tr("账号或密码不能为空，请重新输入账号密码"),QMessageBox::Retry);
+}
+
+void LoginDialog::ShowNoQuestRefutation(){
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::critical(this, tr("账号不存在"),tr("账号不存在，请重新输入账号"),QMessageBox::Retry);
+}
+
+void LoginDialog::on_CancelButton_clicked(){
+    this->~LoginDialog();
 }

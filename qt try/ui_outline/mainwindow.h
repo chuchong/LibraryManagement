@@ -9,7 +9,7 @@
 #include <QListWidget>
 #include <QStackedWidget>
 #include <QLabel>
-#include "constant.h"
+#include "configure.h"
 #include "logindialog.h"
 namespace Ui {
 class MainWindow;
