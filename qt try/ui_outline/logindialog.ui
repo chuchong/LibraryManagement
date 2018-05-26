@@ -127,7 +127,7 @@
     <string>登录</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="RegisterButton_3">
+  <widget class="QPushButton" name="CancelButton">
    <property name="geometry">
     <rect>
      <x>290</x>

@@ -8,7 +8,7 @@ LoginDialog::LoginDialog(QWidget *parent) :
 {
     ui->setupUi(this);
     //connect(this,SIGNAL(LoginSignals(QString, QString)),
-    //       this,SLOT(debug(QString, QString)));
+    //      this,SLOT(debug(QString, QString)));
 }
 
 LoginDialog::~LoginDialog()
@@ -42,7 +42,7 @@ void LoginDialog::OpenMainWindowofAdministrator(){
 
     MainWindow * mainwnd = new MainWindow(nullptr,USER_NUM);
     mainwnd -> show();
-    this->~LoginDialog();
+    this->close();
 }
 
 void LoginDialog::ShowRefutation(){
@@ -61,5 +61,5 @@ void LoginDialog::ShowNoQuestRefutation(){
 }
 
 void LoginDialog::on_CancelButton_clicked(){
-    this->~LoginDialog();
+    this->close();
 }

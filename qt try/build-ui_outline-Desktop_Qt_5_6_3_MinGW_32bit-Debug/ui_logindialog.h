@@ -33,7 +33,7 @@ public:
     QLabel *label_5;
     QPushButton *RegisterButton;
     QPushButton *LoginButton;
-    QPushButton *RegisterButton_3;
+    QPushButton *CancelButton;
 
     void setupUi(QDialog *LoginDialog)
     {
@@ -68,9 +68,9 @@ public:
         LoginButton = new QPushButton(LoginDialog);
         LoginButton->setObjectName(QStringLiteral("LoginButton"));
         LoginButton->setGeometry(QRect(180, 240, 93, 28));
-        RegisterButton_3 = new QPushButton(LoginDialog);
-        RegisterButton_3->setObjectName(QStringLiteral("RegisterButton_3"));
-        RegisterButton_3->setGeometry(QRect(290, 240, 93, 28));
+        CancelButton = new QPushButton(LoginDialog);
+        CancelButton->setObjectName(QStringLiteral("CancelButton"));
+        CancelButton->setGeometry(QRect(290, 240, 93, 28));
 
         retranslateUi(LoginDialog);
 
@@ -87,7 +87,7 @@ public:
         label_5->setText(QApplication::translate("LoginDialog", "\345\257\206\347\240\201", Q_NULLPTR));
         RegisterButton->setText(QApplication::translate("LoginDialog", "\346\263\250\345\206\214", Q_NULLPTR));
         LoginButton->setText(QApplication::translate("LoginDialog", "\347\231\273\345\275\225", Q_NULLPTR));
-        RegisterButton_3->setText(QApplication::translate("LoginDialog", "\345\217\226\346\266\210", Q_NULLPTR));
+        CancelButton->setText(QApplication::translate("LoginDialog", "\345\217\226\346\266\210", Q_NULLPTR));
     } // retranslateUi
 
 };
