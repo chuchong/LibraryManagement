@@ -21,7 +21,7 @@ LoginDialog::~LoginDialog()
 void LoginDialog::on_LoginButton_clicked()
 {
     QString account = ui->AccountEdit->text();
-    QString password = ui->AccountEdit->text();
+    QString password = ui->PasswordEdit->text();
 //    this->ShowRefutation();
     emit LoginSignals(account, password);
 }
