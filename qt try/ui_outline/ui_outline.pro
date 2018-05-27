@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,13 +17,15 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     logindialog.cpp \
     libman.cpp \
-    register.cpp
+    register.cpp \
+    db.cpp
 
 HEADERS  += mainwindow.h \
     logindialog.h \
     libman.h \
     register.h \
-    configure.h
+    configure.h \
+    db.h
 
 FORMS    += mainwindow.ui \
     logindialog.ui \

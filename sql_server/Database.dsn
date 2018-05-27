@@ -1,8 +1,0 @@
-[ODBC]
-DRIVER=ODBC Driver 17 for SQL Server
-UID=ServerAdmit
-TrustServerCertificate=No
-Encrypt=Yes
-WSID=LAPTOP-RPD9KEH6
-Trusted_Connection=No
-SERVER=mynewserver-20180506.database.windows.net

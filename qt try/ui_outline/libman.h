@@ -3,6 +3,7 @@
 #include "register.h"
 #include <QObject>
 #include "configure.h"
+#include "db.h"
 
 #pragma once
 

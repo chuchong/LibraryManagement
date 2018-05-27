@@ -30,10 +30,7 @@ private slots:
     void on_LoginButton_clicked();
     void on_RegisterButton_clicked();
     void on_CancelButton_clicked();
-    void debug(QString accnount, QString password){
-     this->ShowRefutation();
-     //this->OpenMainWindowofStudent();
-    }
+    void debug(QString accnount, QString password);
 
 private:
     Ui::LoginDialog *ui;

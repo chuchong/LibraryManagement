@@ -1,14 +1,15 @@
 #include "logindialog.h"
 #include "ui_logindialog.h"
 #include "libman.h"
+#include "db.h"
 
 LoginDialog::LoginDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::LoginDialog)
 {
     ui->setupUi(this);
-    //connect(this,SIGNAL(LoginSignals(QString, QString)),
-    //      this,SLOT(debug(QString, QString)));
+    connect(this,SIGNAL(LoginSignals(QString, QString)),
+          this,SLOT(debug(QString, QString)));
 }
 
 LoginDialog::~LoginDialog()
@@ -63,3 +64,21 @@ void LoginDialog::ShowNoQuestRefutation(){
 void LoginDialog::on_CancelButton_clicked(){
     this->close();
 }
+ void LoginDialog::debug(QString accnount, QString password){
+      DB test("F:\\sqlite\\admitDB.db");
+      int flag=test.EnterCheck(accnount,password);
+
+      if(flag==0){
+         this->OpenMainWindowofStudent();
+      }
+      else if(flag==1){
+          this->ShowNoQuestRefutation();
+      }
+      else{
+          this->ShowRefutation();
+      }
+
+
+
+
+ }
